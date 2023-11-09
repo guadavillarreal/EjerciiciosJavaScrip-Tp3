@@ -15,4 +15,3 @@ let numEntero = 0;
 
 numEntero=parseInt(prompt("Ingrese un número entero"));
 paridad(numEntero);
-
