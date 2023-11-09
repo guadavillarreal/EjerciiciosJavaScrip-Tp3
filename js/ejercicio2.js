@@ -28,26 +28,25 @@ while (confirm("¿Desea seguir agregando ciudades?")) {
   ciudades.push(ciudad);
 }
 
-document.write(`<h3>El arreglo de ciudades tiene ${ciudades.length} elementos</h3>`);
+document.write(
+  `<h3>El arreglo de ciudades tiene ${ciudades.length} elementos</h3>`);
 
 document.write(`<h3>Posiciones de elementos: </h3>
 <ul>
 <li>Primera posición: ${ciudades[0]}</li>
 <li>Tercera posición: ${ciudades[2]}</li>
-<li>Ultima posición: ${ciudades[ciudades.length-1]}</li>
+<li>Ultima posición: ${ciudades[ciudades.length - 1]}</li>
 </ul>`);
 
 ciudades.push("Paris");
-document.write(`<h4>Ultima posición: ${ciudades[ciudades.length-1]}</h4>`);
+document.write(`<h4>Ultima posición: ${ciudades[ciudades.length - 1]}</h4>`);
 //verificar que ponga el punto el li
 document.write(`<br><li>Segunda posición: ${ciudades[1]}</li><br>`);
 
-ciudades[1]="Barcelona";  
+ciudades[1] = "Barcelona";
 document.write(`<h2>Arreglo de ciudades: </h2>`);
 document.write(`<ul>`);
 for (let index = 0; index < ciudades.length; index++) {
-document.write(`<li> Elemento: ${ciudades[index]}</li>`);
+  document.write(`<li> Elemento: ${ciudades[index]}</li>`);
 }
 document.write(`</ul>`);
-
-//document.write(ciudades);
