@@ -5,9 +5,9 @@ arreglo generado, luego realizar las siguientes acciones:
   1-Mostrar la longitud del arreglo.
   2-Mostrar en el documento web los ítems de las posiciones 
   primera, tercera y última.
-  3-Añade en última posición la ciudad de París.
+  3-Añade en última posición la ciudad de París.--
   4-Escribe por pantalla el elemento que ocupa la segunda 
-  posición.
+  posición.---
   5-Sustituye el elemento que ocupa la segunda posición por 
   la ciudad de 'Barcelona'.
 Ejemplo:  Input: [‘Nueva York, Estados Unidos’, ‘Barcelona, 
@@ -23,26 +23,31 @@ let ciudad;
 ciudad = prompt("Ingrese una ciudad");
 ciudades.unshift(ciudad);
 
-console.log(ciudades);
-
 while (confirm("¿Desea seguir agregando ciudades?")) {
   ciudad = prompt("Ingrese una ciudad");
   ciudades.push(ciudad);
 }
-document.write(`<br>${ciudades}`);
 
-document.write(`<br> La longitud del arreglo es: ${ciudades.length}`);
-document.write(`<br>Posiciones de elementos: 
-<ol>
+document.write(`<h3>El arreglo de ciudades tiene ${ciudades.length} elementos</h3>`);
+
+document.write(`<h3>Posiciones de elementos: </h3>
+<ul>
 <li>Primera posición: ${ciudades[0]}</li>
 <li>Tercera posición: ${ciudades[2]}</li>
 <li>Ultima posición: ${ciudades[ciudades.length-1]}</li>
-</ol>`);
+</ul>`);
 
-ciudades.push("<br> Paris <br>");
-document.write(ciudades);
+ciudades.push("Paris");
+document.write(`<h4>Ultima posición: ${ciudades[ciudades.length-1]}</h4>`);
+//verificar que ponga el punto el li
+document.write(`<br><li>Segunda posición: ${ciudades[1]}</li><br>`);
 
-document.write(`<br>Segunda posición: ${ciudades[1]} <br>`);
+ciudades[1]="Barcelona";  
+document.write(`<h2>Arreglo de ciudades: </h2>`);
+document.write(`<ul>`);
+for (let index = 0; index < ciudades.length; index++) {
+document.write(`<li> Elemento: ${ciudades[index]}</li>`);
+}
+document.write(`</ul>`);
 
-ciudades[1]="Barcelona";
-document.write(ciudades);
+//document.write(ciudades);
