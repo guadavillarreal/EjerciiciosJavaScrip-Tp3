@@ -8,34 +8,35 @@ apariciones de dicha suma, repitiendo 50 veces esta operación.
 const lanzamientos = [];
 const apariciones = [];
 let resultados = 0;
-let suma = 0;
 let sumaresultados = 0;
-let numeroAleatorio1 = 0;
-let numeroAleatorio2 = 0;
 
 for (let index = 0; index < 50; index++) {
-  numeroAleatorio1 = Math.floor(Math.random() * 6) + 1;
-  numeroAleatorio2 = Math.floor(Math.random() * 6) + 1;
-  suma = numeroAleatorio1 + numeroAleatorio2;
+  let numeroAleatorio1 = Math.floor(Math.random() * 6) + 1;
+  let numeroAleatorio2 = Math.floor(Math.random() * 6) + 1;
+  let suma = numeroAleatorio1 + numeroAleatorio2;
   lanzamientos.push(suma);
-  
+  console.log(lanzamientos);
+  document.write(lanzamientos[index].includes(suma));
 }
- //   //filtra las apariciones de los resultados
- //lanzamientos.filter((lanzamiento) => lanzamiento === suma)
+// for (let index = 0; index < lanzamientos.length; index++) {  
+// }
+document.write(lanzamientos);
+//   //filtra las apariciones de los resultados
+//lanzamientos.filter((lanzamiento) => lanzamiento === suma)
 // if ( apariciones = lanzamientos.find(item)=> item === suma) {
 //   resultados++;
 //   apariciones.push(sumaresultados);
 // }
-console.log(lanzamientos);
-console.log(suma);
+// console.log(lanzamientos);
+// console.log(suma);
 
-//muestra lanzamientos
-document.write(`La lista de Lanzamientos:`);
-document.write(`<ul>`);
-for (let index = 0; index < lanzamientos.length; index++) {
-  document.write(`<li> ${lanzamientos[index]} </li>`);
-}
-document.write(`</ul>`);
+// //muestra lanzamientos
+// document.write(`La lista de Lanzamientos:`);
+// document.write(`<ul>`);
+// for (let index = 0; index < lanzamientos.length; index++) {
+//   document.write(`<li> ${lanzamientos[index]} </li>`);
+// }
+// document.write(`</ul>`);
 
 // document.write(`<h2>Apariciones:</h2>`);
 // document.write(`<ul>`);
