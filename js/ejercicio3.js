@@ -18,14 +18,16 @@ for (let index = 0; index < 50; index++) {
   numeroAleatorio2 = Math.floor(Math.random() * 6) + 1;
   suma = numeroAleatorio1 + numeroAleatorio2;
   lanzamientos.push(suma);
-  if (lanzamientos.filter((lanzamiento) => lanzamiento === suma)) {
-    resultados++;
-    apariciones.push(sumaresultados);
-  }
+  
 }
+ //   //filtra las apariciones de los resultados
+ //lanzamientos.filter((lanzamiento) => lanzamiento === suma)
+// if ( apariciones = lanzamientos.find(item)=> item === suma) {
+//   resultados++;
+//   apariciones.push(sumaresultados);
+// }
 console.log(lanzamientos);
 console.log(suma);
-//   //filtra las apariciones de los resultados
 
 //muestra lanzamientos
 document.write(`La lista de Lanzamientos:`);

@@ -40,7 +40,7 @@ document.write(`<h3>Posiciones de elementos: </h3>
 
 ciudades.push("Paris");
 document.write(`<h4>Ultima posición: ${ciudades[ciudades.length - 1]}</h4>`);
-//verificar que ponga el punto el li
+
 document.write(`<br><li>Segunda posición: ${ciudades[1]}</li><br>`);
 
 ciudades[1] = "Barcelona";
