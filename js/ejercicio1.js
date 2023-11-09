@@ -17,7 +17,7 @@ const meses = [
   "Noviembre",
   "Diciembre",
 ];
-document.write(`La lista de los Meses:`)
+document.write(`La lista de los Meses:`);
 document.write(`<ul>`);
 for (let index = 0; index < meses.length; index++) {
   document.write(`<li> ${meses[index]} </li>`);

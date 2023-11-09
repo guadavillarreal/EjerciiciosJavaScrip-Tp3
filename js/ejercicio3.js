@@ -6,30 +6,32 @@ apariciones de dicha suma, repitiendo 50 veces esta operación.
     Ejemplo de salida:(ver img del tp)*/
 
 const lanzamientos = [];
-// const apariciones = [];
-// let resultados = 0;
-// let suma = 0;
-// let sumaresultados = 0;
-// let numeroAleatorio1 = 0;
-// let numeroAleatorio2 = 0;
+const apariciones = [];
+let resultados = 0;
+let suma = 0;
+let sumaresultados = 0;
+let numeroAleatorio1 = 0;
+let numeroAleatorio2 = 0;
 
 for (let index = 0; index < 50; index++) {
   numeroAleatorio1 = Math.floor(Math.random() * 6) + 1;
   numeroAleatorio2 = Math.floor(Math.random() * 6) + 1;
   suma = numeroAleatorio1 + numeroAleatorio2;
   lanzamientos.push(suma);
+  if (lanzamientos.filter((lanzamiento) => lanzamiento === suma)) {
+    resultados++;
+    apariciones.push(sumaresultados);
+  }
 }
 console.log(lanzamientos);
+console.log(suma);
 //   //filtra las apariciones de los resultados
-//   if (lanzamientos.filter( (lanzamiento)=> lanzamiento === suma)) {
-//     resultados++;
-//     apariciones.push(sumaresultados);
-//   }
+
 //muestra lanzamientos
 document.write(`La lista de Lanzamientos:`);
 document.write(`<ul>`);
 for (let index = 0; index < lanzamientos.length; index++) {
-  document.write(`<li> ${lanzamientos[i]} `);
+  document.write(`<li> ${lanzamientos[index]} </li>`);
 }
 document.write(`</ul>`);
 
