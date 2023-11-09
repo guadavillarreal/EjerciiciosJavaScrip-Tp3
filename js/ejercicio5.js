@@ -13,7 +13,6 @@ function determinarTexto(cadena) {
             ${cadena}`);
   } else {
     //mixto
-
     document.write(`<h2>La frase ingresada esta escrita tanto con MAYUSCULAS, como con MINUSCULAS </h2>
             ${cadena}`);
   }
